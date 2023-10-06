@@ -12,3 +12,6 @@ lint:
 
 report:
 	./gradlew jacocoTestReport
+
+brain-even:
+	node bin/brain-even.js
