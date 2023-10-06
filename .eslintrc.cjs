@@ -1,7 +1,9 @@
 module.exports = {
+  root: true,
   env: {
     browser: true,
     es2021: true,
+    node: true,
   },
   extends: 'airbnb',
   overrides: [
@@ -19,8 +21,9 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module',
   },
   rules: {
+    'no-console': 'off',
+    'import/extensions': 'off',
   },
 };
