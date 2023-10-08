@@ -1,9 +1,6 @@
 import readlineSync from 'readline-sync';
-
-const name = readlineSync.question('May I have your name? ');
-const greetUser = () => {
-  console.log(`Hello, ${name}!`);
-};
+// import greetUser from '../src/cli.js';
+import { name } from '../src/cli.js';
 
 const isNumberEven = () => {
   for (let i = 0; i <= 2; i += 1) {
@@ -29,6 +26,6 @@ const isNumberEven = () => {
 };
 
 export default isNumberEven;
-export {
-  greetUser,
-};
+// export {
+//   greetUser,
+// };
