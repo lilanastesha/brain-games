@@ -9,7 +9,7 @@ const startOfGame = (description, randomRound) => {
     console.log(`Question: ${questionGame}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
-    if (answerGame !== +userAnswer) {
+    if (answerGame !== userAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answerGame}'.`);
       console.log(`Let's try again, ${userName}!`);
       return;

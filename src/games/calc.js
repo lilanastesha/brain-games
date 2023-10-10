@@ -7,12 +7,12 @@ const roundOfGame = () => {
   const randomIndex = Math.floor(Math.random() * operations.length);
   const randomOperation = operations[randomIndex];
   const example = `${firstNumber} ${randomOperation} ${secondNumber}`;
-  const answer = eval(example);
+  const answer = String(eval(example));
 
   return [example, answer];
 };
 
-const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'What is the result of the expression?';
 
 const gameCalc = () => {
   startOfGame(description, roundOfGame);
