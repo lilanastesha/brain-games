@@ -13,7 +13,7 @@ const roundOfGame = () => {
 
   const randomIndex = Math.floor(Math.random() * arrayLength);
   const missingNum = array[randomIndex];
-  array[randomIndex] = 'х';
+  array[randomIndex] = '..';
   const answer = String(missingNum);
   return [array, answer];
 };
