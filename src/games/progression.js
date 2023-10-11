@@ -15,7 +15,7 @@ const roundOfGame = () => {
   const missingNum = array[randomIndex];
   array[randomIndex] = '..';
   const answer = String(missingNum);
-  return [array, answer];
+  return [array.join(' '), answer];
 };
 
 const description = 'What number is missing in the progression?';
