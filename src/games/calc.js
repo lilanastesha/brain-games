@@ -7,6 +7,7 @@ const roundOfGame = () => {
   const randomIndex = Math.floor(Math.random() * operations.length);
   const randomOperation = operations[randomIndex];
   const example = `${firstNumber} ${randomOperation} ${secondNumber}`;
+  // eslint-disable-next-line no-eval
   const answer = String(eval(example));
 
   return [example, answer];

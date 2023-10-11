@@ -1,5 +1,6 @@
 import startOfGame from '../index.js';
 
+// eslint-disable-next-line consistent-return
 const isPrime = (number) => {
   const divisors = [];
 
