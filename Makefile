@@ -10,9 +10,6 @@ publish:
 lint:
 	npx eslint .
 
-report:
-	./gradlew jacocoTestReport
-
 brain-even:
 	node bin/brain-even.js
 

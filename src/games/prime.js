@@ -1,6 +1,6 @@
-import startOfGame from '../index.js';
+import runEngine from '../index.js';
+import generateRandomNumber from '../helper.js';
 
-// eslint-disable-next-line consistent-return
 const isPrime = (number) => {
   const divisors = [];
 
@@ -13,18 +13,20 @@ const isPrime = (number) => {
   if (divisors.length === 2) {
     return true;
   }
+
+  return false;
 };
 
 const roundOfGame = () => {
-  const randomNumber = Math.floor(Math.random() * 100);
+  const randomNumber = generateRandomNumber(0, 100);
   const answer = isPrime(randomNumber) ? 'yes' : 'no';
   return [randomNumber, answer];
 };
 
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const gameEven = () => {
-  startOfGame(description, roundOfGame);
+const runEven = () => {
+  runEngine(description, roundOfGame);
 };
 
-export default gameEven;
+export default runEven;

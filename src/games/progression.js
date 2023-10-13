@@ -1,8 +1,9 @@
-import startOfGame from '../index.js';
+import runEngine from '../index.js';
+import generateRandomNumber from '../helper.js';
 
 const roundOfGame = () => {
-  const startNum = Math.floor(Math.random() * 10) + 1;
-  const step = Math.floor(Math.random() * 10) + 1;
+  const startNum = generateRandomNumber(0, 10);
+  const step = generateRandomNumber(0, 10);
   const arrayLength = Math.floor(Math.random() * 6) + 5;
 
   const array = [];
@@ -20,8 +21,8 @@ const roundOfGame = () => {
 
 const description = 'What number is missing in the progression?';
 
-const gameProgression = () => {
-  startOfGame(description, roundOfGame);
+const runProgression = () => {
+  runEngine(description, roundOfGame);
 };
 
-export default gameProgression;
+export default runProgression;
