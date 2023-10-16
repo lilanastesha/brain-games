@@ -16,7 +16,6 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "publish": "npm publish --dry-run",
   "dependencies": {
     "readline-sync": "^1.4.10"
   },

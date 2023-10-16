@@ -3,7 +3,7 @@ import generateRandomNumber from '../helper.js';
 
 const isEven = (number) => number % 2 === 0;
 
-const roundOfGame = () => {
+const generateRound = () => {
   const randomNumber = generateRandomNumber(0, 100);
   const answer = isEven(randomNumber) ? 'yes' : 'no';
   return [randomNumber, answer];
@@ -12,7 +12,7 @@ const roundOfGame = () => {
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const runEven = () => {
-  runEngine(description, roundOfGame);
+  runEngine(description, generateRound);
 };
 
 export default runEven;

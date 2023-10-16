@@ -17,7 +17,7 @@ const isPrime = (number) => {
   return false;
 };
 
-const roundOfGame = () => {
+const generateRound = () => {
   const randomNumber = generateRandomNumber(0, 100);
   const answer = isPrime(randomNumber) ? 'yes' : 'no';
   return [randomNumber, answer];
@@ -26,7 +26,7 @@ const roundOfGame = () => {
 const description = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 const runEven = () => {
-  runEngine(description, roundOfGame);
+  runEngine(description, generateRound);
 };
 
 export default runEven;

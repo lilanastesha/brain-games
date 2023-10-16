@@ -1,7 +1,7 @@
 import runEngine from '../index.js';
 import generateRandomNumber from '../helper.js';
 
-const roundOfGame = () => {
+const generateRound = () => {
   const startNum = generateRandomNumber(0, 10);
   const step = generateRandomNumber(0, 10);
   const arrayLength = Math.floor(Math.random() * 6) + 5;
@@ -22,7 +22,7 @@ const roundOfGame = () => {
 const description = 'What number is missing in the progression?';
 
 const runProgression = () => {
-  runEngine(description, roundOfGame);
+  runEngine(description, generateRound);
 };
 
 export default runProgression;

@@ -1,35 +1,34 @@
 import runEngine from '../index.js';
 import generateRandomNumber from '../helper.js';
 
-// eslint-disable-next-line consistent-return
-const calculate = (firstNumber, secondNumber, operator) => {
+const calculate = (number1, number2, operator) => {
   switch (operator) {
     case '+':
-      return (firstNumber + secondNumber);
+      return (number1 + number2);
     case '-':
-      return (firstNumber - secondNumber);
+      return (number1 - number2);
     case '*':
-      return (firstNumber * secondNumber);
+      return (number1 * number2);
     default:
-      console.log('error');
+      return 'Error: unknown operator';
   }
 };
 
-const roundOfGame = () => {
-  const firstNumber = generateRandomNumber(0, 10);
-  const secondNumber = generateRandomNumber(0, 10);
+const generateRound = () => {
+  const number1 = generateRandomNumber(0, 10);
+  const number2 = generateRandomNumber(0, 10);
   const operators = ['+', '-', '*'];
   const randomOperators = generateRandomNumber(0, operators.length - 1);
-  const example = `${firstNumber} ${operators[randomOperators]} ${secondNumber}`;
-  const answer = String(calculate(firstNumber, secondNumber, operators[randomOperators]));
+  const question = `${number1} ${operators[randomOperators]} ${number2}`;
+  const answer = String(calculate(number1, number2, operators[randomOperators]));
 
-  return [example, answer];
+  return [question, answer];
 };
 
 const description = 'What is the result of the expression?';
 
 const runCalc = () => {
-  runEngine(description, roundOfGame);
+  runEngine(description, generateRound);
 };
 
 export default runCalc;
