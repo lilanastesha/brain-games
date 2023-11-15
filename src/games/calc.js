@@ -10,7 +10,7 @@ const calculate = (number1, number2, operator) => {
     case '*':
       return (number1 * number2);
     default:
-      return 'Error: unknown operator';
+      return 'Error: something is wrong with the given numbers';
   }
 };
 
@@ -18,9 +18,9 @@ const generateRound = () => {
   const number1 = generateRandomNumber(0, 10);
   const number2 = generateRandomNumber(0, 10);
   const operators = ['+', '-', '*'];
-  const randomOperators = generateRandomNumber(0, operators.length - 1);
-  const question = `${number1} ${operators[randomOperators]} ${number2}`;
-  const answer = String(calculate(number1, number2, operators[randomOperators]));
+  const operator = generateRandomNumber(0, operators.length - 1);
+  const question = `${number1} ${operators[operator]} ${number2}`;
+  const answer = String(calculate(number1, number2, operators[operator]));
 
   return [question, answer];
 };
