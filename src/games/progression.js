@@ -10,11 +10,11 @@ const getProgression = (firstNumber, step, length) => {
 };
 
 const generateRound = () => {
-  const firstNumber = generateRandomNumber(0, 10);
-  const step = generateRandomNumber(0, 10);
+  const firstNumber = generateRandomNumber(1, 10);
+  const step = generateRandomNumber(1, 10);
   const progressions = getProgression(firstNumber, step, 7);
 
-  const hiddenIndex = generateRandomNumber(0, progressions.length);
+  const hiddenIndex = generateRandomNumber(0, progressions.length - 1);
   const answer = String(progressions[hiddenIndex]);
 
   progressions[hiddenIndex] = '..';
