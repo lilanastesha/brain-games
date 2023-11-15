@@ -10,7 +10,8 @@ const calculate = (number1, number2, operator) => {
     case '*':
       return (number1 * number2);
     default:
-      return 'Error: something is wrong with the given numbers';
+      return `Error: something is wrong with the given numbers.
+      Number 1: ${number1}, number 2: ${number1}`;
   }
 };
 
