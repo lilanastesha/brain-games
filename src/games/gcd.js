@@ -19,7 +19,7 @@ const generateRound = () => {
 
   const answer = String(getGcd(number1, number2));
   return [example, answer];
-}
+};
 
 const description = 'Find the greatest common divisor of given numbers.';
 
